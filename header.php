@@ -25,8 +25,8 @@
                     <ul>
                         <li class="active"><a href="index.html">Home</a></li>
                         <li><a href="Gallery.php">Gallery</a></li>
-                        <li><a href="pages/style-demo.html">Category</a></li>
-                        <li><a href="pages/style-demo.html">Download</a>
+                        <li><a href="CategoryList.php">Category</a></li>
+                        <li><a href="#">Download</a>
                             <ul>
                                 <li><a href="#">Brochure</a></li>
                                 <li><a href="#">Installation Manual</a></li>
