@@ -47,11 +47,11 @@ include './connect.php';
         <h2 style="color:#fff; font-size:18px; ">Our Wide Range of Product Categories </h2><br>
         <?php
         global $conn;
-        //$Conditions = array( 'deleted' => 'N', 'category_parent'=> '1', 'category_status'=> 'Active');
-        //$OrderBy = " category_id ASC ";
-        //list($res,$Pg,$TtlRows)=getResultSet('category_detail',$Conditions,$OrderBy);
-        $categoryQuery = "select * from category_detail where 1 and deleted = 'N' and category_parent = '1' and category_status = 'Active' order by category_id asc";
-        $res = mysqli_query($conn, $categoryQuery);
+        $Conditions = array( 'deleted' => 'N', 'category_parent'=> '1', 'category_status'=> 'Active');
+        $OrderBy = " category_id ASC ";
+        list($res,$Pg,$TtlRows)=getResultSet('category_detail',$Conditions,$OrderBy);
+        //$categoryQuery = "select * from category_detail where 1 and deleted = 'N' and category_parent = '1' and category_status = 'Active' order by category_id asc";
+        //$res = mysqli_query($conn, $categoryQuery);
         ?>
         <?php
         $i = 1;

@@ -1,0 +1,4 @@
+09.05.2016 8:30:24am | SELECT * FROM category_detail WHERE 1  AND deleted = 'N'  AND category_parent = '1'  AND category_status = 'Active'  ORDER BY  category_id ASC   
+ ----------------------- 
+09.05.2016 8:31:51am | SELECT * FROM category_detail WHERE 1  AND deleted = 'N'  AND category_parent = '1'  AND category_status = 'Active'  ORDER BY  category_id ASC   
+ ----------------------- 
