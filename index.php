@@ -29,15 +29,15 @@ include './connect.php';
 
         <p>Since last 30 yrs Kishore farm equipment Pvt Ltd (KFEPL) is engaged in the development of new & innovative agricultural products, today KFEPL among the top companies providing poultry equipments. Founded by Mr. Mangalbhai. L. Rosia and Later Mr. Kishore M Rosia & Rajesh M Rosia joined the company taking on the responsibilities of marketing and production respectively.</p>
         <p>KFEPL with D&B number is sharply focused on building Quality & Excellence in all its activities to provide high quality products that gives utmost satisfaction to farmers across India.</p>
-      <!--  &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;-->
+        <!--  &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;-->
 
 
     </div>
@@ -47,9 +47,9 @@ include './connect.php';
         <h2 style="color:#fff; font-size:18px; ">Our Wide Range of Product Categories </h2><br>
         <?php
         global $conn;
-        $Conditions = array( 'deleted' => 'N', 'category_parent'=> '1', 'category_status'=> 'Active');
+        $Conditions = array('deleted' => 'N', 'category_parent' => '1', 'category_status' => 'Active');
         $OrderBy = " category_id ASC ";
-        list($res,$Pg,$TtlRows)=getResultSet('category_detail',$Conditions,$OrderBy);
+        list($res, $Pg, $TtlRows) = getResultSet('category_detail', $Conditions, $OrderBy);
         //$categoryQuery = "select * from category_detail where 1 and deleted = 'N' and category_parent = '1' and category_status = 'Active' order by category_id asc";
         //$res = mysqli_query($conn, $categoryQuery);
         ?>
@@ -66,16 +66,16 @@ include './connect.php';
             <div class="<?php echo $class; ?> prodbox">
 
                 <div class="boxy">
-    <?php /* ?><div class="boxytitle"><h2><a href="#"><?php echo clean($rows['category_name']);?> &raquo;</a></h2></div>
-      <br class="clear" /> <?php */ ?>
+                    <?php /* ?><div class="boxytitle"><h2><a href="#"><?php echo clean($rows['category_name']);?> &raquo;</a></h2></div>
+                      <br class="clear" /> <?php */ ?>
                     <a href="product_list.php?cid=<?php echo base64_encode($primary_id); ?>" >
                         <img src="catimg/<?php echo clean($rows['category_image']); ?>" alt="" width="100" height="100"/>
                     </a>
                     <!-- <p><strong><a href="#">Product feature</a></strong></p> -->
                     <p> <?php
-                    $my_string = clean($rows['category_description']);
-                    echo Truncate($my_string, 300);
-                    ?> </p>
+                        $my_string = clean($rows['category_description']);
+                        echo Truncate($my_string, 300);
+                        ?> </p>
                 </div>
                 <br class="clear" />
                 <div class="boxyfoot">
@@ -85,10 +85,10 @@ include './connect.php';
 
                 </div>
             </div>
-    <?php $i++;
-} ?>
+            <?php $i++;
+        }
+        ?>
     </div>
-    
 </div>
 <br class="clear" />
 <?php

@@ -3,9 +3,31 @@
         <title>kishorefarm</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
         <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
-        <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
-        <script type="text/javascript" src="layout/scripts/jquery.jcarousel.pack.js"></script>
-        <script type="text/javascript" src="layout/scripts/jquery.jcarousel.setup.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+            <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+            <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+            <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+            <script type="text/javascript" src="layout/scripts/jquery.jcarousel.pack.js"></script>
+            <script type="text/javascript" src="layout/scripts/jquery.jcarousel.setup.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                    $('#brand').change(function () {
+                        var brand_id = $(this).val();
+                        $.ajax({
+                            url: "loaddata.php",
+                            method: "POST",
+                            data: {brand_id: brand_id},
+                            success: function (data) {
+                                $('#show_product').html(data);
+                            }
+                        });
+                    });
+
+                });
+
+            </script>  
     </head>
     <body id="top">
         <!-- ####################################################################################################### -->
@@ -25,8 +47,8 @@
                     <ul>
                         <li class="active"><a href="index.html">Home</a></li>
                         <li><a href="Gallery.php">Gallery</a></li>
-                        <li><a href="pages/style-demo.html">Category</a></li>
-                        <li><a href="pages/style-demo.html">Download</a>
+                        <li><a href="CategoryList.php">Category</a></li>
+                        <li><a href="#">Download</a>
                             <ul>
                                 <li><a href="#">Brochure</a></li>
                                 <li><a href="#">Installation Manual</a></li>
