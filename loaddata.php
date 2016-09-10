@@ -1,4 +1,3 @@
-
 <?php
 include './connect.php';
 global $conn;
@@ -18,9 +17,9 @@ global $conn;
       while($row = mysqli_fetch_array($result))  
       {  
            //$output .= '<div class="col-md-3"><div style="border:1px solid #ccc; padding:20px; margin-bottom:20px;">'.$row["product_name"].'</div></div>';  
-          $output .= '<button class = "accordion">'.$row["product_name"].'</button>';
-        $output .= '<div class = "panel">';
-        $output .= '<p>'.$row["product_desc"].'</p>';
+         $output .= '<h3>' . $row["product_name"] . '</h3>';
+        $output .= '<div>';
+        $output .= '<p>' . $row["product_desc"] . '</p>';
         $output .= '</div>';
       }  
       echo $output;  
