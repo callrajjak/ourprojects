@@ -25,7 +25,7 @@ $cid = base64_decode($_REQUEST['cid']);
 function fill_product($conn) {
     global $cid;
     $output = '';
-    $sql = "select pd.product_id,pd.product_name,pcd.category_id from product_detail as pd,product_category_detail as pcd where pd.product_id = pcd.product_id and pcd.category_id = " . $cid;
+    $sql = "select * from product_detail as pd,product_category_detail as pcd where pd.product_id = pcd.product_id and pcd.category_id = " . $cid;
     $result = mysqli_query($conn, $sql);
     while ($row = mysqli_fetch_array($result)) {
 
