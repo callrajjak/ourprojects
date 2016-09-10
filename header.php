@@ -5,11 +5,11 @@
         <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
             <link href="layout/styles/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-<!--            <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-            <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>-->
-            <script src="layout/scripts/jquery.min.js" type="text/javascript"></script>
-            <script src="layout/scripts/jquery.jcarousel.pack.js" type="text/javascript"></script>
-            <script src="layout/scripts/jquery.jcarousel.setup.js" type="text/javascript"></script>
+            <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+            <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+            <!--<script src="layout/scripts/jquery.min.js" type="text/javascript"></script>-->
+<!--            <script src="layout/scripts/jquery.jcarousel.pack.js" type="text/javascript"></script>
+            <script src="layout/scripts/jquery.jcarousel.setup.js" type="text/javascript"></script>-->
             <script>
                 $(document).ready(function () {
                     $('#brand').change(function () {
