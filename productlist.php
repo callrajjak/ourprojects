@@ -20,19 +20,12 @@ include './connect.php';
 <?php
 global $conn;
 
-function fill_brand($conn) {
-    $output = '';
-    $sql = "SELECT * FROM category_detail";
-    $result = mysqli_query($conn, $sql);
-    while ($row = mysqli_fetch_array($result)) {
-        $output .= '<option value="' . $row["category_id"] . '">' . $row["category_name"] . '</option>';
-    }
-    return $output;
-}
+$cid = base64_decode($_REQUEST['cid']);
 
 function fill_product($conn) {
+    global $cid;
     $output = '';
-    $sql = "SELECT * FROM product_detail";
+    $sql = "select pd.product_id,pd.product_name,pcd.category_id from product_detail as pd,product_category_detail as pcd where pd.product_id = pcd.product_id and pcd.category_id = " . $cid;
     $result = mysqli_query($conn, $sql);
     while ($row = mysqli_fetch_array($result)) {
 
@@ -46,8 +39,10 @@ function fill_product($conn) {
 ?>  
 <!DOCTYPE html>  
 <div id="productContainer">
+    <span id="arrowIcon">==></span>
     <div id="sideCatContainer">
         <div id="sidecategory">
+            <h2 id="catHeader">Categories</h2>
             <ul>
                 <?php
                 global $conn;
@@ -60,25 +55,28 @@ function fill_product($conn) {
                     $primary_id = clean($rows['category_id']);
                     ?>
 
-                    <li><a href="productlist.php?cid=<?php echo base64_encode($primary_id); ?>" class="catboxyfoottile"><?php echo clean($rows['category_name']); ?> </a></li>
+                    <li><a href="productlist.php?cid=<?php echo base64_encode($primary_id); ?>"><?php echo clean($rows['category_name']); ?> </a></li>
                     <?php
                 }
                 ?>
             </ul>
         </div>
     </div>
-
-    <div class="container">  
+    
+    <div id="prodHeader">
+        <div id="productsTitle">Category Containing Products</div>
+        <div class="container">  
 
     <!--    <select name="brand" id="brand">  
             <option value="">Show All Product</option>  
-        <?php // echo fill_brand($conn); ?> 
+            <?php // echo fill_brand($conn); ?> 
         </select>  -->
 
-        <div id="show_product">  
-            <?php echo fill_product($conn); ?>  
-        </div>  
+            <div id="show_product">  
+                <?php echo fill_product($conn); ?>  
+            </div>  
 
+        </div>
     </div>
 </div>
 <script>

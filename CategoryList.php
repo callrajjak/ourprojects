@@ -29,7 +29,7 @@ include './connect.php';
           <br class="clear" /> <?php */ ?>
 
                     <a href="productlist.php?cid=<?php echo base64_encode($primary_id); ?>" >
-                        <img src="catimg/<?php echo clean($rows['category_image']); ?>" alt="" width="100" height="100"/>
+                        <img src="images/catimg/<?php echo clean($rows['category_image']); ?>" alt="" width="100" height="100"/>
                     </a>
                     <!-- <p><strong><a href="#">Product feature</a></strong></p> -->
                     <p id="categorydesc"> <?php
