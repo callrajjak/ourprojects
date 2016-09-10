@@ -4,13 +4,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
         <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-            <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
-            <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-            <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-            <script type="text/javascript" src="layout/scripts/jquery.jcarousel.pack.js"></script>
-            <script type="text/javascript" src="layout/scripts/jquery.jcarousel.setup.js"></script>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+            <link href="layout/styles/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<!--            <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+            <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>-->
+            <script src="layout/scripts/jquery.min.js" type="text/javascript"></script>
+            <script src="layout/scripts/jquery.jcarousel.pack.js" type="text/javascript"></script>
+            <script src="layout/scripts/jquery.jcarousel.setup.js" type="text/javascript"></script>
             <script>
                 $(document).ready(function () {
                     $('#brand').change(function () {
@@ -20,14 +19,16 @@
                             method: "POST",
                             data: {brand_id: brand_id},
                             success: function (data) {
-                                $('#show_product').html(data);
+                               
+                            $('#show_product').html(data);
                             }
                         });
                     });
-
+                    
                 });
 
             </script>  
+
     </head>
     <body id="top">
         <!-- ####################################################################################################### -->

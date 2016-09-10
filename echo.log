@@ -244,3 +244,33 @@
  ----------------------- 
 09.06.2016 5:05:14pm | SELECT * FROM category_detail WHERE 1  AND deleted = 'N'  AND category_parent = '1'  AND category_status = 'Active'  ORDER BY  category_id ASC   
  ----------------------- 
+09.08.2016 7:42:20pm | SELECT * FROM category_detail WHERE 1  AND deleted = 'N'  AND category_parent = '1'  AND category_status = 'Active'  ORDER BY  category_id ASC   
+ ----------------------- 
+09.08.2016 7:42:26pm | SELECT * FROM category_detail WHERE 1  AND deleted = 'N'  AND category_parent = '1'  AND category_status = 'Active'  ORDER BY  category_id ASC   
+ ----------------------- 
+09.09.2016 4:26:14pm | SELECT * FROM category_detail WHERE 1  AND deleted = 'N'  AND category_parent = '1'  AND category_status = 'Active'  ORDER BY  category_id ASC   
+ ----------------------- 
+09.09.2016 7:15:57pm | SELECT * FROM category_detail WHERE 1  AND deleted = 'N'  AND category_parent = '1'  AND category_status = 'Active'  ORDER BY  category_id ASC   
+ ----------------------- 
+09.10.2016 7:14:18am | SELECT * FROM category_detail WHERE 1  AND deleted = 'N'  AND category_parent = '1'  AND category_status = 'Active'  ORDER BY  category_id ASC   
+ ----------------------- 
+09.10.2016 7:21:14am | SELECT * FROM category_detail WHERE 1  AND deleted = 'N'  AND category_parent = '1'  AND category_status = 'Active'  ORDER BY  category_id ASC   
+ ----------------------- 
+09.10.2016 8:13:23am | SELECT * FROM category_detail WHERE 1  AND deleted = 'N'  AND category_parent = '1'  AND category_status = 'Active'  ORDER BY  category_id ASC   
+ ----------------------- 
+09.10.2016 8:25:45am | SELECT * FROM category_detail WHERE 1  AND deleted = 'N'  AND category_parent = '1'  AND category_status = 'Active'  ORDER BY  category_id ASC   
+ ----------------------- 
+09.10.2016 8:33:17am | SELECT * FROM category_detail WHERE 1  AND deleted = 'N'  AND category_parent = '1'  AND category_status = 'Active'  ORDER BY  category_id ASC   
+ ----------------------- 
+09.10.2016 8:47:20am | SELECT * FROM category_detail WHERE 1  AND deleted = 'N'  AND category_parent = '1'  AND category_status = 'Active'  ORDER BY  category_id ASC   
+ ----------------------- 
+09.10.2016 8:48:44am | SELECT * FROM category_detail WHERE 1  AND deleted = 'N'  AND category_parent = '1'  AND category_status = 'Active'  ORDER BY  category_id ASC   
+ ----------------------- 
+09.10.2016 8:49:59am | SELECT * FROM category_detail WHERE 1  AND deleted = 'N'  AND category_parent = '1'  AND category_status = 'Active'  ORDER BY  category_id ASC   
+ ----------------------- 
+09.10.2016 8:53:09am | SELECT * FROM category_detail WHERE 1  AND deleted = 'N'  AND category_parent = '1'  AND category_status = 'Active'  ORDER BY  category_id ASC   
+ ----------------------- 
+09.10.2016 9:14:31am | SELECT * FROM category_detail WHERE 1  AND deleted = 'N'  AND category_parent = '1'  AND category_status = 'Active'  ORDER BY  category_id ASC   
+ ----------------------- 
+09.10.2016 9:14:59am | SELECT * FROM category_detail WHERE 1  AND deleted = 'N'  AND category_parent = '1'  AND category_status = 'Active'  ORDER BY  category_id ASC   
+ ----------------------- 

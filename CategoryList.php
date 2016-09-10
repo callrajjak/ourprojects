@@ -14,8 +14,7 @@ include './connect.php';
         $Conditions = array('deleted' => 'N', 'category_parent' => '1', 'category_status' => 'Active');
         $OrderBy = " category_id ASC ";
         list($res, $Pg, $TtlRows) = getResultSet('category_detail', $Conditions, $OrderBy);
-        ?>
-        <?php
+
         $i = 1;
         while ($rows = mysqli_fetch_array($res)) {
             $primary_id = clean($rows['category_id']);
@@ -57,9 +56,9 @@ include './connect.php';
                             <li>
                                 <a><?php echo "Products not available to display!!!!" ?> </a>
                             </li>
-        <?php
-    }
-    ?>
+                            <?php
+                        }
+                        ?>
                     </ul>            
                     <!--<a href="category_view.php?cid=<?php echo base64_encode($primary_id); ?>" class="product_details_container">Details</a>-->
 
@@ -67,10 +66,10 @@ include './connect.php';
             </div>
             <br/>
             <br/>
-    <?php
-    $i++;
-}
-?>
+            <?php
+            $i++;
+        }
+        ?>
     </div>  
 </div>
 <br class="clear"/>
