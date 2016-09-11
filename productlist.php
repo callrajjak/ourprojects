@@ -39,7 +39,7 @@ function fill_product($conn) {
 ?>  
 <!DOCTYPE html>  
 <div id="productContainer">
-    <span id="arrowIcon">==></span>
+    
     <div id="sideCatContainer">
         <div id="sidecategory">
             <h2 id="catHeader">Categories</h2>
@@ -62,7 +62,7 @@ function fill_product($conn) {
             </ul>
         </div>
     </div>
-    
+    <span id="arrowIcon">==></span>
     <div id="prodHeader">
         <div id="productsTitle">Category Containing Products</div>
         <div class="container">  
@@ -78,6 +78,7 @@ function fill_product($conn) {
 
         </div>
     </div>
+    
 </div>
 <script>
     $(function () {
