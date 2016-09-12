@@ -62,7 +62,7 @@ function fill_product($conn) {
             </ul>
         </div>
     </div>
-    <span id="arrowIcon">==></span>
+    <span id="arrowIcon"><img src="layout/images/right.png" height="50" width="50"/></span>
     <div id="prodHeader">
         <div id="productsTitle">Category Containing Products</div>
         <div class="container">  
