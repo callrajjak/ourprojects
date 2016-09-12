@@ -51,7 +51,7 @@
                 <div id="topnav">
                     <ul>
                         <li class="active"><a href="index.php">Home</a></li>
-                        <li><a href="Gallery.php">Gallery</a></li>
+                        <li><a href="Gallery.php#1">Gallery</a></li>
                         <li><a href="CategoryList.php">Category</a></li>
                         <li><a href="#">Download</a>
                             <ul>
