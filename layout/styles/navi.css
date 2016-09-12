@@ -5,7 +5,7 @@
 #topnav li a:link, #topnav li a:visited, #topnav li a:hover{display:block; margin:0; padding:15px 20px; color:#999999; background-color:#333333;}
 #topnav ul ul li a:link, #topnav ul ul li a:visited{border:none;}
 #topnav li.last a{margin-right:0;}
-#topnav li a:hover, #topnav ul li.active a{color:#FFFFFF; background-color:#B2C629;}
+#topnav li a:hover, #topnav ul li.active a{color:#FFFFFF; background-color:#42DDD7;}
 #topnav li li a:link, #topnav li li a:visited{width:150px; float:none; margin:0; padding:7px 10px; font-size:12px; font-weight:normal;}
 #topnav li ul{z-index:9999; position:absolute; left:-999em; height:auto; width:170px; border-left:1px solid #CCCCCC; border-bottom:1px solid #CCCCCC;}
 #topnav li ul a{width:140px;}
