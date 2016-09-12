@@ -38,7 +38,7 @@ include './connect.php';
         function ScaleSlider() {
             var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
             if (refSize) {
-                refSize = Math.min(refSize, 750);
+                refSize = Math.min(refSize, 900);
                 jssor_1_slider.$ScaleWidth(refSize);
             } else {
                 window.setTimeout(ScaleSlider, 30);
@@ -51,15 +51,15 @@ include './connect.php';
         //responsive code end
     });
 </script>
-<div class="wrapper col5">
+<div class="wrapper">
     <div id="featured_slide">
-        <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 750px; height: 400px; overflow: hidden; visibility: hidden;">
+        <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 900px; height: 400px; overflow: hidden; visibility: hidden; border-radius: 10px 125px;">
             <!-- Loading Screen -->
             <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
                 <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
                 <div style="position:absolute;display:block;background:url('../../images/Gallery/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
             </div>
-            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 750px; height: 400px; overflow: hidden;">
+            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 900px; height: 400px; overflow: hidden;">
                 <div data-p="112.50" style="display: none;">
                     <img data-u="image" src="images/Gallery/G1.jpg" />
                     <div data-u="thumb">Do you notice it is draggable by mouse/finger?</div>
@@ -79,7 +79,7 @@ include './connect.php';
                 <a data-u="any" href="http://www.jssor.com/demos/banner-slider.slider" style="display:none">Banner Slider</a>
             </div>
             <!-- Thumbnail Navigator -->
-            <div data-u="thumbnavigator" class="jssort09-750-45" style="position:absolute;bottom:0px;left:0px;width:750px;height:55px;">
+            <div data-u="thumbnavigator" class="jssort09-750-45" style="position:absolute;bottom:0px;left:0px;width:900px;height:75px;">
                 <div style="position: absolute; top: 0; left: 0; width: 100%; height:100%; background-color: #000; filter:alpha(opacity=40.0); opacity:0.4;"></div>
                 <!-- Thumbnail Item Skin Begin -->
                 <div data-u="slides" style="cursor: default;">
