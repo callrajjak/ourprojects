@@ -53,10 +53,10 @@
                         <li class="active"><a href="index.php">Home</a></li>
                         <li><a href="Gallery.php#1">Gallery</a></li>
                         <li><a href="CategoryList.php">Category</a></li>
-                        <li><a href="#">Download</a>
+                        <li><a href="#1">Download</a>
                             <ul>
-                                <li><a href="#">Brochure</a></li>
-                                <li><a href="#">Installation Manual</a></li>
+                                <li><a href="#1">Brochure</a></li>
+                                <li><a href="#1">Installation Manual</a></li>
                             </ul></li>
                         <li><a href="AboutUs.php">About Us</a></li>
                         <li><a href="ContactUs.php">Contact Us</a></li>
