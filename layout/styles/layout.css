@@ -168,7 +168,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 
 /* ----------------------------------------------Copyright------------------------------------- */
 
-#copyright{padding:10px 0;margin-top: 162px;/*! position: fixed; */}
+#copyright{padding:10px 0;margin-top: 25px;/*! position: fixed; */}
 #copyright p{margin:0; padding:0;}
 
 #categoryContainer
@@ -404,7 +404,7 @@ div#categoryheader a {
 {
     
     margin-left: -110px;
-    margin-top: 20px;
+    /*! margin-top: 0; */
 }
 #featured_slide
 {
