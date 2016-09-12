@@ -179,8 +179,8 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
     width:960px;
     background:#fff;
     padding:10px !important;
-    border-left:1px solid #aaa;
-    border-right:1px solid #aaa;
+    /*! border-left:1px solid #aaa; */
+    /*! border-right:1px solid #aaa; */
 }
 #categoryContainer{
     padding:0 0 5px 0;
