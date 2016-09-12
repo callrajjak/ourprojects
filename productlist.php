@@ -31,7 +31,10 @@ function fill_product($conn) {
 
         $output .= '<h3>' . $row["product_name"] . '</h3>';
         $output .= '<div>';
-        $output .= '<p>' . $row["product_desc"] . '</p>';
+        $output .= '<span id="proimg">';
+        $output .= '<img src="images/catimg/'.($row["product_image"]).'"/>';
+        $output .= '</span>';
+        $output .= '<p>' . ($row["product_desc"]) . '</p>';
         $output .= '</div>';
     }
     return $output;
@@ -55,14 +58,14 @@ function fill_product($conn) {
                     $primary_id = clean($rows['category_id']);
                     ?>
 
-                    <li><a href="productlist.php?cid=<?php echo base64_encode($primary_id); ?>"><?php echo clean($rows['category_name']); ?> </a></li>
+                <li><a href="productlist.php?cid=<?php echo base64_encode($primary_id); ?>"><?php echo clean($rows['category_name']); ?> </a></li>
                     <?php
                 }
                 ?>
             </ul>
         </div>
     </div>
-    <span id="arrowIcon"><img src="layout/images/right.png" height="50" width="50"/></span>
+    <span id="arrowIcon"><img src="layout/images/right.png" height="100" width="100"/></span>
     <div id="prodHeader">
         <div id="productsTitle">Category Containing Products</div>
         <div class="container">  
