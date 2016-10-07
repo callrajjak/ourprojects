@@ -461,7 +461,7 @@ function isRecordExist($tbl,$cond)
 			}
 		}
 		
-		
+		echo "$con_str<br/>";
 		if(!empty($values))
 		{
 			if(is_array($values))
@@ -483,8 +483,9 @@ function isRecordExist($tbl,$cond)
 				$con_str .= " VALUES(".$values.") ";
 			}
 		}
-		
+		echo "$con_str<br/>";
 		$query = "INSERT INTO $table $con_str ";
+                echo "$query";
 		echoLog($query);
 		$res=mysqli_query($conn,$query);
 		if($res)

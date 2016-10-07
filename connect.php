@@ -16,7 +16,7 @@
 //		$DbUsrNm	=	"kishoref_rkpanel";
 //		$Pwd		=	"simple@159";
 //		$DbNm		=	"kishoref_kfrk";
-		$siteurl	=	"http://localhost:81/kishorefarm/admin";//"http://www.kishorefarm.com/admin/";
+		$siteurl	=	"http://localhost/kishorefarmnew/ourprojects/kishorefarm-admin/";//"http://www.kishorefarm.com/admin/";
 		
                 define('hostname','localhost');
                 define('username','root');

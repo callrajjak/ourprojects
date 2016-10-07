@@ -1150,7 +1150,8 @@ hr {
 	font-size:12px
 }
 p {
-	margin:10px 0 0 30px;
+	margin:10px 0 0 80px;
+	/*! width: 75%; */
 }
 .lead {
 	margin-bottom:20px;
