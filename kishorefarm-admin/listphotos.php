@@ -63,8 +63,8 @@ include_once('admin_header.php');
 			?>
                     <tr class="gradeA">
                         <td><?php echo clean($rows['gallery_name']);?></td>
-                        <td><a href="../catimg/<?php echo $rows['gallery_image'];?>" target="_blank">
-							<img src='../catimg/<?php echo $rows['gallery_image'];?>' width="100"  /></a></td>
+                        <td><a href="../images/catimg/<?php echo $rows['gallery_image'];?>" target="_blank">
+							<img src='../images/catimg/<?php echo $rows['gallery_image'];?>' width="100"  /></a></td>
                             <td><?php echo clean($rows['gallery_status']);?></td>
                       
                       

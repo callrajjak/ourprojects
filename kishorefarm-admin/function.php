@@ -274,14 +274,16 @@ function getResultSet($Table, $Conditions = "", $OrderBy = "", $Pg = 0) {
         if (is_array($Conditions)) {
             $keys = array_keys($Conditions);
             $values = array_values($Conditions);
-
+            
+            
             $key_count = count($keys);
             $value_count = count($values);
+            
 
             if ($key_count == $value_count) {
                 for ($c = 0; $c < $value_count; $c++) {
                     if (!empty($values[$c])) {
-                        $con_str .= " AND " . $keys[$c] . " = '" . striptags(cleanDB($values[$c])) . "' ";
+                        $con_str .= " AND " . $keys[$c] . " = '" . striptags(($values[$c])) . "' ";
                     }
                 }
             }
