@@ -15,6 +15,7 @@ include './connect.php';
         border:1px solid #FDF8E4;
         background:#846733;
         color:#fff;
+        width: 70%;
     }
 </style>
 <?php

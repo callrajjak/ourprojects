@@ -4,11 +4,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
-            <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+                <link href="layout/styles/jquery-ui.css" rel="stylesheet" type="text/css"/>
                 <link href="layout/styles/bootstrap.min.css" rel="stylesheet" type="text/css"/>
                 <script src="layout/scripts/bootstrap.min.js" type="text/javascript"></script>
                 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+                <script src="layout/scripts/jquery.min.js" type="text/javascript"></script>
                 <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
                 <script src="layout/scripts/jssor.slider-21.1.5.debug.js" type="text/javascript"></script>
                     <!--<script src="layout/scripts/jquery.min.js" type="text/javascript"></script>-->

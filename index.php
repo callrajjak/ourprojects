@@ -38,7 +38,7 @@ include './connect.php';
         function ScaleSlider() {
             var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
             if (refSize) {
-                refSize = Math.min(refSize, 900);
+                refSize = Math.min(refSize, 600);
                 jssor_1_slider.$ScaleWidth(refSize);
             } else {
                 window.setTimeout(ScaleSlider, 30);
@@ -53,13 +53,13 @@ include './connect.php';
 </script>
 <div class="wrapper">
     <div id="featured_slide">
-        <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 900px; height: 400px; overflow: hidden; visibility: hidden; border-radius: 10px 125px;">
+        <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: -150px; width: 600px; height: 400px; overflow: hidden; visibility: hidden; border-radius: 10px 125px;">
             <!-- Loading Screen -->
-            <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div data-u="loading" style="position: absolute; top: 0px; left: -150px;">
                 <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
                 <div style="position:absolute;display:block;background:url('../../images/Gallery/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
             </div>
-            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 900px; height: 400px; overflow: hidden;">
+            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden;">
                 <div data-p="112.50" style="display: none;">
                     <img data-u="image" src="images/Gallery/G1.jpg" />
                     <div data-u="thumb">Do you notice it is draggable by mouse/finger?</div>
@@ -79,7 +79,7 @@ include './connect.php';
                 <a data-u="any" href="http://www.jssor.com/demos/banner-slider.slider" style="display:none">Banner Slider</a>
             </div>
             <!-- Thumbnail Navigator -->
-            <div data-u="thumbnavigator" class="jssort09-750-45" style="position:absolute;bottom:0px;left:0px;width:900px;height:75px;">
+            <div data-u="thumbnavigator" class="jssort09-750-45" style="position:absolute;bottom:0px;left:-150px;width:600px;height:75px;">
                 <div style="position: absolute; top: 0; left: 0; width: 100%; height:100%; background-color: #000; filter:alpha(opacity=40.0); opacity:0.4;"></div>
                 <!-- Thumbnail Item Skin Begin -->
                 <div data-u="slides" style="cursor: default;">
@@ -97,6 +97,26 @@ include './connect.php';
             <span data-u="arrowleft" class="jssora05l" style="top:0px;left:8px;width:40px;height:40px;" data-autocenter="2"></span>
             <span data-u="arrowright" class="jssora05r" style="top:0px;right:8px;width:40px;height:40px;" data-autocenter="2"></span>
         </div>
+    </div>
+    <div id="categorySideContainer">
+            <h2 id="catHeader">Categories</h2>
+            <ul>
+                <?php
+                global $conn;
+                $Conditions = array('deleted' => 'N', 'category_parent' => '1', 'category_status' => 'Active');
+                $OrderBy = " category_id ASC ";
+                list($res, $Pg, $TtlRows) = getResultSet('category_detail', $Conditions, $OrderBy);
+
+                $i = 1;
+                while ($rows = mysqli_fetch_array($res)) {
+                    $primary_id = clean($rows['category_id']);
+                    ?>
+
+                <li><a href="productlist.php?cid=<?php echo base64_encode($primary_id); ?>"><?php echo clean($rows['category_name']); ?> </a></li>
+                    <?php
+                }
+                ?>
+            </ul>
     </div>
 </div>
 <!-- ####################################################################################################### -->
