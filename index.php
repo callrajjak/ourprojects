@@ -98,27 +98,33 @@ include './connect.php';
             <span data-u="arrowright" class="jssora05r" style="top:0px;right:8px;width:40px;height:40px;" data-autocenter="2"></span>
         </div>
     </div>
-    <div id="categorySideContainer">
-            <h2 id="catHeader">Categories</h2>
-            <ul>
-                <?php
-                global $conn;
-                $Conditions = array('deleted' => 'N', 'category_parent' => '1', 'category_status' => 'Active');
-                $OrderBy = " category_id ASC ";
-                list($res, $Pg, $TtlRows) = getResultSet('category_detail', $Conditions, $OrderBy);
+    <div class="column productcase" >
+        <?php
+        global $conn;
+        $Conditions = array('deleted' => 'N', 'product_status' => 'Active');
+        $OrderBy = " RAND() LIMIT 3";
+        list($res, $Pg, $TtlRows) = getResultSet('product_detail', $Conditions, $OrderBy);
+        ?>
 
-                $i = 1;
-                while ($rows = mysqli_fetch_array($res)) {
-                    $primary_id = clean($rows['category_id']);
-                    ?>
-
-                <li><a href="productlist.php?cid=<?php echo base64_encode($primary_id); ?>"><?php echo clean($rows['category_name']); ?> </a></li>
-                    <?php
-                }
+        <ul class="latestnews">
+            <?php
+            while ($rows = mysqli_fetch_array($res)) {
+                $primary_id = clean($rows['product_id']);
                 ?>
-            </ul>
+                <li><a href="product_view.php?pid=<?php echo base64_encode($primary_id); ?>"><img src="./images/catimg/<?php echo clean($rows['product_image']); ?>" alt="" height="100" width="100"/></a>
+                    <p><strong><a href="product_view.php?pid=<?php echo base64_encode($primary_id); ?>"><?php echo clean($rows['product_name']); ?></a></strong>
+                        <br><?php
+                        $my_string = strip_tags($rows['product_desc']);
+                        echo Truncate($my_string, 150);
+                        ?> 
+                    </p>
+                </li>
+            <?php } ?>
+        </ul>
+
     </div>
 </div>
+<br class="clear" />
 <!-- ####################################################################################################### -->
 <div class="wrapper col3">
     <div id="container">
