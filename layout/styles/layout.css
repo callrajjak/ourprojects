@@ -87,7 +87,7 @@ img{display:block; /*! margin-left:25px; */ padding:0px; border:none;border-radi
 }
 /* ----------------------------------------------Wrapper------------------------------------- */
 
-div.wrapper{display:block; width:100%;  text-align:left;}
+div.wrapper{display:block; width:100%;  text-align:left;/*! border: 1px solid; */}
 div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wrapper h6{margin:0; padding:0; font-size:20px; font-weight:normal; line-height:normal; font-family:Georgia, "Times New Roman", Times, serif;}
 .col1{color:#CCCCCC; background-color:#000000;}
 .col2, .col2 a{color:#FFFFFF; background-color:#B2C629;}
@@ -95,7 +95,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 .col3 a{color:RGBA(65, 65, 65, 0.77); /*! background-color:#FFFFFF; */}
 .col4{color:#FFFFFF; background-color:#000000;}
 .col4 a{color:#95AD19; background-color:#000000;}
-.col5, .col5 a{color:#333333; background-color:#2AC5CB;}
+.col5, .col5 a{color:#333333; background-color:#2AC5CB;position: fixed;/*! height: 100%; */bottom: 0px;height: 45px;}
 
 /* ----------------------------------------------Generalise------------------------------------- */
 
@@ -139,7 +139,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 
 /* Comments */
 
-#comments{margin-bottom:40px;}
+#comments{margin-bottom:40px;margin-top: 20px;}
 #comments .commentlist{margin:0; padding:0;}
 #comments .commentlist ul{margin:0; padding:0; list-style:none;}
 #comments .commentlist li.comment_odd, #comments .commentlist li.comment_even{margin:0 0 10px 0; padding:15px; list-style:none;}
@@ -178,7 +178,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 
 /* ----------------------------------------------Copyright------------------------------------- */
 
-#copyright{padding:10px 0;margin-top: 134px;/*! position: fixed; */}
+#copyright{padding:10px 0;/*! margin-top: 134px; *//*! position: fixed; */}
 #copyright p{margin:0; padding:0;}
 
 /* ---------------------------------------- edited ----------------------------------------------*/
@@ -324,7 +324,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 	clear:left;
 	}
 
-.productcase{border:0px solid red;padding:0 5px;width:290px !important; background:#0DDEF7 url('../images/repproductcase.png') repeat-x;margin-top: -405px;margin-right: 310px;}
+.productcase{border:0px solid red;padding:0 5px;width:20%; background:#0DDEF7;margin-top: -405px;margin-left: 62%;float: left;}
 #categoryContainer
 {
     position:relative;

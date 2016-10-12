@@ -36,11 +36,13 @@
   </div>
 </div>
 <!-- ####################################################################################################### -->
-
+<br/>
+<br/>
+<br/>
 <div class="wrapper col5">
   <div id="copyright">
     <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved</p>
-    <p class="fl_right">Designed by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">MuDAT</a></p>
+    <p class="fl_right">Designed by GE</p>
     <br class="clear" />
   </div>
 </div>

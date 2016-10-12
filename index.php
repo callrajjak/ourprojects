@@ -80,7 +80,7 @@ include './connect.php';
             </div>
             <!-- Thumbnail Navigator -->
             <div data-u="thumbnavigator" class="jssort09-750-45" style="position:absolute;bottom:0px;left:-150px;width:600px;height:75px;">
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height:100%; background-color: #000; filter:alpha(opacity=40.0); opacity:0.4;"></div>
+                <!--<div style="position: absolute; top: 0; left: 0; width: 100%; height:100%; background-color: #000; filter:alpha(opacity=40.0); opacity:0.4;"></div>-->
                 <!-- Thumbnail Item Skin Begin -->
                 <div data-u="slides" style="cursor: default;">
                     <div data-u="prototype" class="p">
@@ -111,8 +111,8 @@ include './connect.php';
             while ($rows = mysqli_fetch_array($res)) {
                 $primary_id = clean($rows['product_id']);
                 ?>
-                <li><a href="product_view.php?pid=<?php echo base64_encode($primary_id); ?>"><img src="./images/catimg/<?php echo clean($rows['product_image']); ?>" alt="" height="100" width="100"/></a>
-                    <p><strong><a href="product_view.php?pid=<?php echo base64_encode($primary_id); ?>"><?php echo clean($rows['product_name']); ?></a></strong>
+                <li><a href="productlist.php?cid=<?php echo base64_encode($primary_id); ?>"><img src="./images/catimg/<?php echo clean($rows['product_image']); ?>" alt="" height="100" width="100"/></a>
+                    <p><strong><a href="productlist.php?cid=<?php echo base64_encode($primary_id); ?>"><?php echo clean($rows['product_name']); ?></a></strong>
                         <br><?php
                         $my_string = strip_tags($rows['product_desc']);
                         echo Truncate($my_string, 150);
@@ -171,7 +171,7 @@ include './connect.php';
                 <div class="boxy">
                     <?php /* ?><div class="boxytitle"><h2><a href="#"><?php echo clean($rows['category_name']);?> &raquo;</a></h2></div>
                       <br class="clear" /> <?php */ ?>
-                    <a href="product_list.php?cid=<?php echo base64_encode($primary_id); ?>" >
+                    <a href="productlist.php?cid=<?php echo base64_encode($primary_id); ?>" >
                         <img src="images/catimg/<?php echo clean($rows['category_image']); ?>" alt="" width="100" height="100"/>
                     </a>
                     <!-- <p><strong><a href="#">Product feature</a></strong></p> -->
@@ -182,9 +182,8 @@ include './connect.php';
                 </div>
                 <br class="clear" />
                 <div class="boxyfoot">
-                    <a href="product_list.php?cid=<?php echo base64_encode($primary_id); ?>" class="boxyfoottile"><?php echo clean($rows['category_name']); ?> </a>
-                    <a href="category_view.php?cid=<?php echo base64_encode($primary_id); ?>" class="product_details_container">
-                        Details</a>
+                    <a href="productlist.php?cid=<?php echo base64_encode($primary_id); ?>" class="boxyfoottile"><?php echo clean($rows['category_name']); ?> </a>
+                    <a href="CategoryList.php" class="product_details_container">Details</a>
 
                 </div>
             </div>
