@@ -22,7 +22,7 @@ if(strtoupper(trim($_POST["btnSubmit"])) ==	"UPDATE")
 
 	//print_r($productcategory);
 	if($_FILES["productimage"]["name"]!=''){
-		list($result,$msg,$msgcode,$filename)=fileUpload('productimage',"../catimg/");
+		list($result,$msg,$msgcode,$filename)=fileUpload('productimage',"../images/catimg/");
 		if(!$result){$continue=0; $message = $msg;}
 	}
 
@@ -141,7 +141,7 @@ include_once('admin_header.php');
                         <label>Product Image</label> 
                         <div class="formRight">
                             <input type="file" class="fileInput" id="fileInput" name="productimage" />
-							<a href="../catimg/<?php echo $rows['product_image'];?>" target="_blank">
+							<a href="../images/catimg/<?php echo $rows['product_image'];?>" target="_blank">
 							<?php echo $rows['product_image'];?></a>
 
                         </div>

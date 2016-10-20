@@ -17,7 +17,7 @@ if(strtoupper(trim($_POST["btnSubmit"])) ==	"UPDATE")
 
 	//die();
 	if($_FILES["categoryimage"]["name"]!=''){
-		list($result,$msg,$msgcode,$filename)=fileUpload('categoryimage',"../catimg/");
+		list($result,$msg,$msgcode,$filename)=fileUpload('categoryimage',"../images/catimg/");
 		if(!$result){$continue=0; $message = $msg;}
 	}
 
@@ -116,7 +116,7 @@ include_once('admin_header.php');
                         <label>Category Image :</label> 
                         <div class="formRight">
                             <input type="file" class="fileInput" id="fileInput" name="categoryimage" />
-							<a href="../catimg/<?php echo $rows['category_image'];?>" target="_blank">
+							<a href="../images/catimg/<?php echo $rows['category_image'];?>" target="_blank">
 							<?php echo $rows['category_image'];?></a>
                         </div>
                         <div class="fix"></div>

@@ -21,7 +21,7 @@ if(strtoupper(trim($_POST["btnSubmit"])) ==	"ADD")
 
 	//print_r($productcategory);
 
-	list($result,$msg,$msgcode,$filename)=fileUpload('productimage',"../catimg/");
+	list($result,$msg,$msgcode,$filename)=fileUpload('productimage',"../images/catimg/");
 	if(!$result){$continue=0; $message = $msg;}
 
 	if(empty($productcategory)){$continue = 0;$message="Please select category.";}

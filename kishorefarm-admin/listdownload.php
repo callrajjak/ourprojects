@@ -62,7 +62,7 @@ include_once('admin_header.php');
 			?>
                     <tr class="gradeA">
                         <td><?php echo clean($rows['download_name']);?></td>
-                        <td><a href="../catimg/<?php echo $rows['download_image'];?>" target="_blank">
+                        <td><a href="../images/catimg/<?php echo $rows['download_image'];?>" target="_blank">
 							<?php echo $rows['download_image'];?></a></td>
                       
                       

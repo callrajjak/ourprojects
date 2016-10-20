@@ -16,7 +16,7 @@ if(strtoupper(trim($_POST["btnSubmit"])) ==	"ADD")
 
 	//print_r($downloadcategory);
 
-	list($result,$msg,$msgcode,$filename)=fileUpload('downloadimage',"../catimg/");
+	list($result,$msg,$msgcode,$filename)=fileUpload('downloadimage',"../images/catimg/");
 	if(!$result){$continue=0; $message = $msg;}
 
 	if(empty($downloadcategory)){$continue = 0;$message="Please select category.";}

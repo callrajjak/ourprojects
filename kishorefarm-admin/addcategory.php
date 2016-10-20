@@ -16,7 +16,7 @@ if(strtoupper(trim($_POST["btnSubmit"])) ==	"ADD")
 
 	//die();
 
-	list($result,$msg,$msgcode,$filename)=fileUpload('categoryimage',"../catimg/");
+	list($result,$msg,$msgcode,$filename)=fileUpload('categoryimage',"../images/catimg/");
 	if(!$result){$continue=0; $message = $msg;}
 
 	//$result=isRecordExist('`tblUsers`',"username='$username'");

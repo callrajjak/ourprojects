@@ -22,7 +22,7 @@ if(strtoupper(trim($_POST["btnSubmit"])) ==	"UPDATE")
 
 	//print_r($partcategory);
 	if($_FILES["partimage"]["name"]!=''){
-		list($result,$msg,$msgcode,$filename)=fileUpload('partimage',"../catimg/");
+		list($result,$msg,$msgcode,$filename)=fileUpload('partimage',"../images/catimg/");
 		if(!$result){$continue=0; $message = $msg;}
 	}
 
@@ -141,7 +141,7 @@ include_once('admin_header.php');
                         <label>Product Image</label> 
                         <div class="formRight">
                             <input type="file" class="fileInput" id="fileInput" name="partimage" />
-							<a href="../catimg/<?php echo $rows['part_image'];?>" target="_blank">
+							<a href="../images/catimg/<?php echo $rows['part_image'];?>" target="_blank">
 							<?php echo $rows['part_image'];?></a>
 
                         </div>

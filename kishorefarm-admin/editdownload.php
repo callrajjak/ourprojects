@@ -18,7 +18,7 @@ if(strtoupper(trim($_POST["btnSubmit"])) ==	"UPDATE")
 
 	//print_r($downloadcategory);
 	if($_FILES["downloadimage"]["name"]!=''){
-	list($result,$msg,$msgcode,$filename)=fileUpload('downloadimage',"../catimg/");
+	list($result,$msg,$msgcode,$filename)=fileUpload('downloadimage',"../images/catimg/");
 	if(!$result){$continue=0; $message = $msg;}
 	}
 
@@ -150,7 +150,7 @@ include_once('admin_header.php');
                         <label>Download File</label> 
                         <div class="formRight">
                             <input type="file" class="fileInput" id="fileInput" name="downloadimage" />
-                            <a href="../catimg/<?php echo $rows['download_image'];?>" target="_blank">
+                            <a href="../images/catimg/<?php echo $rows['download_image'];?>" target="_blank">
 							<?php echo $rows['download_image'];?></a>
                         </div>
                         <div class="fix"></div>
