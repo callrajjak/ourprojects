@@ -3,6 +3,7 @@
 // Initialize variables to null.
 $name = "";  //Sender Name
 $email = "";  //Sender's email ID
+$confirmemail = "";  //Sender's email ID
 $phone = ""; //Subject of mail
 $message = ""; //Sender's Message 
 $city = ""; //Sender's Message 
@@ -12,6 +13,7 @@ $website = ""; //Sender's Message
 
 $nameError = "";
 $emailError = "";
+$confirmemailError = "";
 $phoneError = "";
 $messageError = "";
 $successMessage = "";
@@ -19,6 +21,8 @@ $companyNameError = "";
 $cityError = "";
 $websiteError = "";
 $countryError = "";
+
+
 
 //On submitting form below function will execute
 
@@ -46,6 +50,11 @@ if (isset($_POST['submit'])) {
     } else {
         $email = test_input($_POST["email"]);
     }
+//    if ($_POST["email"] == $_POST["confirmemail"]) {
+//        $confirmemailError = "Confirmed Email not matched";
+//    } else {
+//        $confirmemail = test_input($_POST["confirmemail"]);
+//    }
 // checking null values in message    
     if (empty($_POST["phone"])) {
         $phoneError = "Phone Number is required";
@@ -74,7 +83,7 @@ if (isset($_POST['submit'])) {
         $message = test_input($_POST["message"]);
     }
 // checking null values in all fields  
-    if (!($name == '') && !($email == '') && !($phone == '') && !($city == '') && !($country == '') && !($message == '')) {// checking valid email
+    if (!($name == '') && !($email == '') && !($phone == '') && !($city == '') && !($country == '') && !($message == '') /*&& !($email == $confirmemail)*/) {// checking valid email
         if (preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email)) {
 
             $header = $name . "<" . $email . ">";
@@ -86,7 +95,7 @@ if (isset($_POST['submit'])) {
             $msg = "Hello! $name
 
  Thank you...! For Contacting Us.
-echo $msg;
+
  Name: $name
  E-mail: $email
  Phone: $phone
@@ -96,7 +105,7 @@ echo $msg;
  We Will contact You as soon as possible.";
 
             $msg1 = " $name Contacted Us.
-echo $msg1;
+
  Here are some information about $name.
 
  Name: $name
@@ -106,11 +115,9 @@ echo $msg1;
 
             /* Send the message using mail() function */
             if (mail($email, $headers, $msg) && mail("callrajjak@gmail.com", $header, $msg1)) {
-                echo "inside if for checking";
                 global $conn;
                 $colArray = array('contact_name' => $name, 'company_name' => $company, 'emailid' => $email, 'phone' => $phone, 'city' => $city, 'country' => $country, 'website' => $website, 'commentsdata' => $message);
 
-                echo "create column array";
                 function filter($v) {
                     if ($v != "") {
                         return true;
@@ -130,10 +137,7 @@ echo $msg1;
                 //die();
 
                 startTransaction();
-                echo "start transaction";
-                echo "$table"." ".$fields." ".$values."<br/>";
                 $response = insert($table, $fields, $values, $conn);
-                echo "response is ".$response;
                 if ($response) {
                     
                     if ($flag) {

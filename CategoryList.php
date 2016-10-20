@@ -63,9 +63,11 @@ include './connect.php';
                         }
                         ?>
                     </ul>            
-                    <!--<a href="category_view.php?cid=<?php echo base64_encode($primary_id); ?>" class="product_details_container">Details</a>-->
-
+                    
+<!--<a href="category_view.php?cid=<?php // echo base64_encode($primary_id); ?>" class="product_details_container">Details</a>-->
                 </div>
+                
+                <a href="download_list.php" class="downloads_details_container">Downloads Now</a>
             </div>
         </div>
             <br/>

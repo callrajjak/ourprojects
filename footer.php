@@ -39,10 +39,19 @@
 <br/>
 <br/>
 <br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <div class="wrapper col5">
   <div id="copyright">
-    <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved</p>
-    <p class="fl_right">Designed by GE</p>
+    <p class="footertext">Copyright &copy; 2014 - All Rights Reserved</p><br/>
+    <p class="footertext">Designed by GE</p>
+    <div class="footbox last">
+        <ul style="list-style: none">
+            <li><iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpoultryequipments&amp;width=300&amp;height=290&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color=%23dddddd&amp;header=true" scrolling="no" frameborder="0" class="fblink" allowTransparency="true"></iframe></li>
+      </ul>
+    </div>
     <br class="clear" />
   </div>
 </div>

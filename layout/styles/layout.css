@@ -22,7 +22,7 @@ br.clear{clear:both; margin-top:-15px;}
 
 a{color:#B2C629; background-color:#FFFFFF; outline:none; text-decoration:none;}
 
-.fl_left, .imgl{float:left;/*! background: #fff; */}
+.fl_left, .imgl{float:left;/*! background: #fff; *//*! font-size: 18px; *//*! margin: 128px 0px 0px 268px; */}
 .fl_right, .imgr{float:right;}
 .fl_leftbackground
 {
@@ -78,9 +78,10 @@ img{display:block; /*! margin-left:25px; */ padding:0px; border:none;border-radi
 .product_details_container {
     display: block;
     float: right;
-    margin: 0;
-    padding: 0;
-    width: 53px;
+    margin-top: -30px;
+    /*! padding: 0; */
+    width: 100px;
+    border: 1px saddlebrown;
 }
 .catboxyfoottileforProduct
 {
@@ -95,7 +96,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 .col3 a{color:RGBA(65, 65, 65, 0.77); /*! background-color:#FFFFFF; */}
 .col4{color:#FFFFFF; background-color:#000000;}
 .col4 a{color:#95AD19; background-color:#000000;}
-.col5, .col5 a{color:#333333; background-color:#2AC5CB;position: fixed;/*! height: 100%; */bottom: 0px;height: 45px;}
+.col5, .col5 a{color:#333333; background-color:#2AC5CB;position: fixed;/*! height: 100%; */bottom: 0px;height: 120px;}
 
 /* ----------------------------------------------Generalise------------------------------------- */
 
@@ -179,7 +180,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 /* ----------------------------------------------Copyright------------------------------------- */
 
 #copyright{padding:10px 0;/*! margin-top: 134px; *//*! position: fixed; */}
-#copyright p{margin:0; padding:0;}
+#copyright p{margin:0px auto; /*! padding:-30px; */margin: 0px 0px 0px 60px;color: #000000e6;}
 
 /* ---------------------------------------- edited ----------------------------------------------*/
 
@@ -647,3 +648,30 @@ div#categoryheader a {
     color:darkslateblue;
 }
 
+.fblink
+{
+    border:none; 
+    overflow:hidden; 
+    width:300px; 
+    height:120px;
+    margin: -72px 0px 0px 500px;
+}
+.footertext
+{
+    
+    /*! margin: 0px 0px 0px 200px; */
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.downloads_details_container
+{
+    display: block;
+    float: right;
+    margin-top: -30px;
+    padding: 0;
+    width: 140px;
+    /*! border: 1px solid; */
+    font-size: 16px;
+    font-weight: bolder;
+}
